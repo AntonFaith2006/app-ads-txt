@@ -20,6 +20,26 @@ nav{display:flex;gap:22px;align-items:center;font-size:.79rem;font-weight:600}na
 .hero p{max-width:610px;font-size:1rem;line-height:1.72;color:#d2d7cf}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:27px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 16px;border-radius:999px;border:1px solid rgba(255,255,255,.2);font-size:.75rem;font-weight:700}.btn.primary{background:var(--lime);border-color:var(--lime);color:#10140d}
 .badge{position:absolute;width:155px;height:155px;right:-210px;bottom:54px;border-radius:50%;object-fit:cover;box-shadow:0 12px 42px rgba(0,0,0,.35);border:3px solid rgba(255,255,255,.08)}
 .strip{border-block:1px solid var(--line);background:#0b0e0b}.stripIn{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:24px;color:#aeb6ab;font-size:.75rem}.stripIn b{color:white}.stripIn .script{font-size:1.05rem}
+
+.growthRail{padding:24px 0;background:#0c100c;border-bottom:1px solid var(--line)}
+.growthGrid{display:grid;grid-template-columns:1.08fr .92fr;gap:14px}
+.growthCard{border:1px solid var(--line);border-radius:14px;padding:20px;background:rgba(255,255,255,.018)}
+.growthCard.follow{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center}
+.growthCard.event{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;border-color:rgba(141,240,0,.26);background:rgba(141,240,0,.028)}
+.growthCard h3{font:600 1.28rem/1.2 Lora,serif;margin:5px 0 6px}
+.growthCard p{margin:0;color:var(--muted);font-size:.79rem;line-height:1.55;max-width:520px}
+.quickSocials{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+.quickSocial{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:0 11px;border-radius:999px;border:1px solid var(--line);font-size:.68rem;font-weight:700;color:#dbe0d8;white-space:nowrap}
+.quickSocial:hover{border-color:var(--lime);color:var(--lime)}
+.eventMini{display:flex;align-items:center;gap:12px}
+.eventDate{min-width:72px;text-align:center;border-right:1px solid var(--line);padding-right:12px}
+.eventDate strong{display:block;font:600 1.45rem/1 Lora,serif;color:var(--lime)}
+.eventDate span{display:block;color:#7d877c;font-size:.61rem;text-transform:uppercase;letter-spacing:.08em;margin-top:4px}
+.eventCta{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:0 13px;border-radius:999px;background:var(--lime);color:#10140d;font-size:.68rem;font-weight:800;white-space:nowrap}
+.growthHint{margin-top:8px;color:#6f786f;font-size:.65rem}
+@media(max-width:900px){.growthGrid{grid-template-columns:1fr}.growthCard.follow,.growthCard.event{grid-template-columns:1fr}.quickSocials{justify-content:flex-start}.eventMini{justify-content:space-between}}
+@media(max-width:640px){.growthRail{padding:16px 0}.growthCard{padding:16px}.quickSocial{flex:1}.eventMini{align-items:flex-end}.eventDate{min-width:62px}}
+
 section{padding:78px 0}.alt{background:var(--bg2)}.sectionHead{max-width:740px;margin-bottom:28px}.sectionHead h2{font:600 clamp(2rem,4.4vw,3.4rem)/1.1 Lora,serif;letter-spacing:-.025em;margin:9px 0 14px}.sectionHead p{color:var(--muted);line-height:1.75;font-size:.94rem}
 .latest{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);gap:28px}.video{aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#000;position:relative;display:block}.video img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s ease}.video:hover img{transform:scale(1.018)}.videoShade{position:absolute;inset:0;display:flex;align-items:flex-end;gap:14px;padding:20px;background:linear-gradient(0deg,rgba(0,0,0,.84),rgba(0,0,0,.05) 60%)}.playCircle{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;flex:0 0 auto;background:var(--lime);color:#10140d;font-size:1rem;padding-left:2px}.videoMeta{min-width:0}.videoMeta small{display:block;color:var(--lime);font-size:.64rem;text-transform:uppercase;letter-spacing:.09em;font-weight:700;margin-bottom:4px}.videoMeta strong{display:block;font:600 clamp(1rem,2.1vw,1.42rem)/1.22 Lora,serif;text-shadow:0 2px 8px rgba(0,0,0,.45)}.sideCopy{border-top:1px solid var(--line);padding-top:18px}.sideCopy h3{font:600 1.45rem/1.25 Lora,serif;margin:0 0 10px}.sideCopy p{color:var(--muted);line-height:1.7;font-size:.87rem}
 .gridList{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}.item{padding:22px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:42px 160px 1fr;gap:14px}.item:nth-child(odd){padding-right:28px}.item:nth-child(even){padding-left:28px;border-left:1px solid var(--line)}.num{color:var(--lime);font-family:var(--script);font-size:1rem}.item strong{font:600 1.08rem Lora,serif}.item span:last-child{color:var(--muted);font-size:.83rem;line-height:1.55}
@@ -59,7 +79,7 @@ footer{padding:40px 0;border-top:1px solid var(--line);background:#060806}.foot{
 <body>
 <header><div class="wrap head">
   <a href="#top"><img class="wordmark" src="data:image/webp;base64,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" alt="ReWyld Outdoors"></a>
-  <nav><a href="#watch">Watch</a><a href="#adventures">Adventures</a><a href="#story">Story</a><a href="#camp">Wyld Camp</a><a href="#rewards">Rewards</a><a class="pill" href="https://www.youtube.com/@ReWyldOutdoors" target="_blank">YouTube ↗</a></nav>
+  <nav><a href="#watch">Watch</a><a href="#camp">Wyld Camp</a><a href="#rewards">Rewards</a><a href="#adventures">Explore</a><a class="pill" href="https://www.youtube.com/@ReWyldOutdoors" target="_blank">YouTube ↗</a></nav>
 </div></header>
 
 <main id="top">
@@ -72,6 +92,36 @@ footer{padding:40px 0;border-top:1px solid var(--line);background:#060806}.foot{
 </div></section>
 
 <div class="strip"><div class="wrap stripIn"><span><b>Entertain. Inspire. Instruct.</b></span><span class="script">Camping · Kayaking · Hiking · Overlanding · Bushcraft</span></div></div>
+
+
+<section class="growthRail" aria-label="Follow ReWyld and upcoming event">
+  <div class="wrap growthGrid">
+    <div class="growthCard follow">
+      <div>
+        <div class="eyebrow">Follow ReWyld</div>
+        <h3>Different content lives on every channel.</h3>
+        <p>Follow all three so you don’t miss the full trips, short clips, community updates or event announcements.</p>
+        <div class="growthHint">Following every free ReWyld social also counts toward the ReWyld Rewards completion bonus.</div>
+      </div>
+      <div class="quickSocials">
+        <a class="quickSocial" data-quick-social="youtube" href="https://www.youtube.com/@ReWyldOutdoors" target="_blank" rel="noopener">YouTube ↗</a>
+        <a class="quickSocial" data-quick-social="instagram" href="https://www.instagram.com/rewyldoutdoors/" target="_blank" rel="noopener">Instagram ↗</a>
+        <a class="quickSocial" data-quick-social="facebook" href="https://www.facebook.com/Rewyldoutdoors/" target="_blank" rel="noopener">Facebook ↗</a>
+      </div>
+    </div>
+    <div class="growthCard event">
+      <div>
+        <div class="eyebrow">Next ReWyld event</div>
+        <h3>Wyld Camp 2026</h3>
+        <p>Doe Lake Campground · Umatilla, Florida · camping, kayaking, classes, community and Saturday dinner.</p>
+      </div>
+      <div class="eventMini">
+        <div class="eventDate"><strong>23–25</strong><span>Oct 2026</span></div>
+        <a class="eventCta" data-primary-event href="https://www.eventbrite.com/e/wyld-camp-2026-by-rewyld-outdoors-tickets-1990026266132" target="_blank" rel="noopener">Get tickets ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="watch"><div class="wrap">
   <div class="sectionHead"><div class="eyebrow">Latest from ReWyld</div><h2>New adventures, straight from the channel.</h2><p>YouTube stays the publishing engine. The site showcases the newest uploads without turning the website into another thing ReWyld Outdoors has to maintain.</p></div>
@@ -290,6 +340,19 @@ function setupTracking(){
 
   document.querySelectorAll("[data-claim]").forEach(btn=>{
     btn.addEventListener("click",()=>claimReward(btn.dataset.claim,btn.dataset.subject||"global",btn));
+  });
+
+  document.querySelectorAll("[data-quick-social]").forEach(a=>{
+    a.addEventListener("click",()=>{
+      const platform=a.dataset.quickSocial||"social";
+      trackOutbound(platform==="youtube"?"youtube_click":"social_click",platform,a.href,null,"Top follow CTA",{placement:"top_follow_rail"});
+    });
+  });
+
+  document.querySelectorAll("[data-primary-event]").forEach(a=>{
+    a.addEventListener("click",()=>{
+      trackOutbound("event_click","event",a.href,"wyld-camp-2026","Wyld Camp 2026",{placement:"top_event_rail"});
+    });
   });
 
   document.querySelectorAll('.social').forEach(a=>{
