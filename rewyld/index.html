@@ -1,447 +1,95 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#0a0d09">
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080a08">
 <title>ReWyld Outdoors — Get Up. Get Out. Stay Wyld.</title>
-<meta name="description" content="Camping, hiking, kayaking, hammock camping, overlanding and Florida outdoor adventures with Shaun and Sara Strickland.">
+<meta name="description" content="Camping, paddling, hiking, hammock camping, overlanding and outdoor skills with Shaun and Sara Strickland.">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap');
-:root{
-  --bg:#0a0d09;
-  --bg2:#10150f;
-  --paper:#f2f0e8;
-  --muted:#a7aea2;
-  --muted2:#788175;
-  --green:#82d63a;
-  --green-soft:#a8e66e;
-  --line:rgba(242,240,232,.12);
-  --max:1160px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;background:var(--bg)}
-body{margin:0;background:var(--bg);color:var(--paper);font-family:"DM Sans",system-ui,-apple-system,sans-serif;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-button{font:inherit}
-.wrap{width:min(var(--max),calc(100% - 38px));margin:auto}
-.top{
-  position:fixed;z-index:50;left:0;right:0;top:0;height:74px;
-  background:rgba(10,13,9,.84);backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--line)
-}
-.topin{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:12px;min-width:0}
-.logoCrop{
-  width:46px;height:46px;overflow:hidden;border-radius:50%;position:relative;
-  background:#141914;border:1px solid rgba(255,255,255,.12);flex:0 0 auto
-}
-.logoCrop img{
-  width:100%;height:100%;object-fit:cover;object-position:50% 42%;
-  transform:scale(2.55);filter:saturate(.9) contrast(1.08)
-}
-.brandText{display:flex;flex-direction:column;line-height:1}
-.brandText strong{font:600 1.05rem/1.05 "Source Serif 4",serif;letter-spacing:.01em}
-.brandText span{font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--green-soft);margin-top:5px}
-.nav{display:flex;align-items:center;gap:22px;font-size:.8rem;font-weight:600}
-.nav a{color:#cfd4ca}
-.nav a:hover{color:white}
-.nav .yt{
-  border:1px solid rgba(130,214,58,.48);color:var(--green-soft);
-  padding:9px 12px;border-radius:999px
-}
-
-.hero{
-  min-height:92svh;display:flex;align-items:flex-end;position:relative;
-  isolation:isolate;padding-top:74px;overflow:hidden
-}
-.hero:after{
-  content:"";position:absolute;inset:0;z-index:-2;
-  background:url('https://outfit-media.s3.amazonaws.com/media/organization/rewyldoutdoors/20221122032614_AddText_11-21-10.05.25.jpg') center/cover no-repeat;
-  filter:saturate(.72) contrast(1.05) brightness(.72)
-}
-.hero:before{
-  content:"";position:absolute;inset:0;z-index:-1;
-  background:linear-gradient(90deg,rgba(10,13,9,.92) 0%,rgba(10,13,9,.64) 47%,rgba(10,13,9,.12) 77%),
-             linear-gradient(0deg,var(--bg) 0%,transparent 32%)
-}
-.heroContent{padding:120px 0 74px;max-width:690px}
-.kicker{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green-soft);font-weight:700}
-.hero h1{
-  font:600 clamp(3rem,6.6vw,5.6rem)/.98 "Source Serif 4",serif;
-  letter-spacing:-.035em;margin:15px 0 22px;max-width:680px
-}
-.hero h1 em{color:var(--green-soft);font-style:italic}
-.hero p{font-size:1.02rem;line-height:1.75;color:#d0d5cc;max-width:610px}
-.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
-.btn{
-  min-height:44px;padding:0 16px;border:1px solid rgba(255,255,255,.2);border-radius:999px;
-  display:inline-flex;align-items:center;justify-content:center;font-size:.76rem;font-weight:700;
-  letter-spacing:.04em
-}
-.btn.primary{background:var(--green);border-color:var(--green);color:#0b0e09}
-.btn:hover{border-color:var(--green)}
-
-.brandLine{
-  border-block:1px solid var(--line);background:#0d110c
-}
-.brandLineIn{
-  min-height:58px;display:flex;align-items:center;justify-content:space-between;gap:24px;
-  color:#b5bcb0;font-size:.76rem
-}
-.brandLineIn b{color:var(--paper);font-weight:600}
-.brandLineIn span:last-child{color:var(--green-soft)}
-
-.section{padding:86px 0}
-.section.alt{background:var(--bg2)}
-.sectionHead{max-width:760px;margin-bottom:30px}
-.sectionHead h2{
-  font:600 clamp(2.2rem,4.8vw,3.8rem)/1.05 "Source Serif 4",serif;
-  letter-spacing:-.025em;margin:10px 0 16px
-}
-.sectionHead h2 em{color:var(--green-soft);font-style:italic}
-.sectionHead p,.lede{color:var(--muted);line-height:1.75;font-size:.98rem}
-
-.latestGrid{
-  display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);gap:28px;align-items:start
-}
-.youtubeFrame{
-  position:relative;aspect-ratio:16/9;background:#050605;border:1px solid var(--line);
-  overflow:hidden;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.26)
-}
-.youtubeFrame iframe{width:100%;height:100%;border:0}
-.latestCopy{
-  border-top:1px solid var(--line);padding-top:20px
-}
-.latestCopy h3{
-  font:600 1.65rem/1.2 "Source Serif 4",serif;margin:0 0 12px
-}
-.latestCopy p{color:var(--muted);line-height:1.7;font-size:.9rem}
-.latestCopy .btn{margin-top:8px}
-
-.adventureList{border-top:1px solid var(--line)}
-.adventure{
-  display:grid;grid-template-columns:70px 210px 1fr;gap:18px;align-items:center;
-  min-height:92px;border-bottom:1px solid var(--line);padding:14px 0
-}
-.adventure .num{font:600 1.1rem "Source Serif 4",serif;color:var(--green-soft)}
-.adventure strong{font:600 1.3rem "Source Serif 4",serif}
-.adventure p{margin:0;color:var(--muted);line-height:1.65;font-size:.88rem}
-.adventure:hover strong{color:var(--green-soft)}
-
-.story{
-  display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:68px;align-items:start
-}
-.storyQuote{
-  font:600 clamp(2.5rem,5vw,4.3rem)/1.05 "Source Serif 4",serif;
-  letter-spacing:-.03em;margin:8px 0 0
-}
-.storyQuote em{display:block;color:var(--green-soft)}
-.storyText{color:var(--muted);line-height:1.82;font-size:.96rem}
-.storyText strong{color:var(--paper)}
-.principles{margin-top:26px;border-top:1px solid var(--line)}
-.principle{padding:16px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:120px 1fr;gap:18px}
-.principle strong{color:var(--green-soft);font-weight:600}
-.principle span{color:#c8cec3}
-
-.camp{
-  position:relative;background:
-  linear-gradient(110deg,rgba(23,34,18,.98),rgba(13,17,12,.98));
-  border-block:1px solid rgba(130,214,58,.16)
-}
-.campGrid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(310px,.9fr);gap:56px;align-items:start}
-.camp h2{font:600 clamp(2.45rem,5vw,4.1rem)/1.05 "Source Serif 4",serif;margin:10px 0 18px}
-.camp h2 span{color:var(--green-soft)}
-.camp p{color:var(--muted);line-height:1.72}
-.campCard{border:1px solid var(--line);border-radius:12px;padding:24px;background:rgba(255,255,255,.02)}
-.campCard strong{display:block;font:600 1.55rem "Source Serif 4",serif;margin-bottom:6px}
-.campCard small{color:var(--muted2)}
-.campFacts{display:grid;gap:10px;margin-top:20px}
-.campFact{display:flex;justify-content:space-between;gap:18px;padding:10px 0;border-top:1px solid var(--line);font-size:.82rem}
-.campFact span:last-child{color:#d8ddd4;text-align:right}
-
-.socials{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.social{
-  border:1px solid var(--line);border-radius:12px;padding:20px;min-height:145px;
-  display:flex;flex-direction:column;justify-content:space-between;background:rgba(255,255,255,.015)
-}
-.social:hover{border-color:rgba(130,214,58,.42);background:rgba(130,214,58,.035)}
-.social .arrow{color:var(--green-soft)}
-.social strong{font:600 1.25rem "Source Serif 4",serif}
-.social small{display:block;color:var(--muted2);margin-top:5px;font-size:.73rem}
-
-.ownerBand{padding:30px 0;border-top:1px solid var(--line);background:#080a07}
-.ownerBandIn{display:flex;justify-content:space-between;align-items:center;gap:22px}
-.ownerBand p{margin:0;color:var(--muted2);max-width:720px;font-size:.82rem;line-height:1.6}
-.ownerBtn{
-  border:1px solid var(--line);background:transparent;color:#c9cec5;border-radius:999px;
-  padding:10px 14px;font-size:.72rem;font-weight:700;cursor:pointer
-}
-.ownerBtn:hover{border-color:var(--green);color:var(--green-soft)}
-
-#iq{display:none;padding:70px 0 90px;background:#0d110c;border-top:2px solid var(--green)}
-.iqTop{display:flex;justify-content:space-between;align-items:end;gap:22px;margin-bottom:24px}
-.iqTop h2{font:600 clamp(2rem,4.3vw,3.5rem)/1.05 "Source Serif 4",serif;margin:8px 0 0}
-.demo{font-size:.66rem;letter-spacing:.09em;text-transform:uppercase;color:#e2bd70;border:1px solid rgba(226,189,112,.32);border-radius:999px;padding:6px 9px}
-.iqGrid{display:grid;grid-template-columns:1.08fr .92fr;gap:16px}
-.panel{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#10150f}
-.panelLabel{padding:11px 15px;border-bottom:1px solid var(--line);font-size:.66rem;color:var(--muted2);text-transform:uppercase;letter-spacing:.1em}
-.mission{padding:22px}
-.priority{font-size:.65rem;color:var(--green-soft);font-weight:700;text-transform:uppercase;letter-spacing:.08em}
-.mission h3{font:600 1.65rem/1.2 "Source Serif 4",serif;margin:6px 0 10px}
-.mission p{color:var(--muted);line-height:1.65;font-size:.88rem}
-.todo{padding:14px 20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px}
-.todo b{font-size:.79rem}
-.todo small{display:block;color:var(--muted2);margin-top:4px}
-.signals{display:grid;grid-template-columns:1fr 1fr}
-.signal{padding:18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
-.signal:nth-child(even){border-right:0}
-.signal strong{font:600 1.7rem "Source Serif 4",serif}
-.signal span{display:block;color:var(--muted2);font-size:.72rem;margin-top:5px}
-.good{color:var(--green-soft)}.warn{color:#e6c572}.bad{color:#e58572}
-.why{padding:20px}
-.why h3{font:600 1.25rem "Source Serif 4",serif;margin:0 0 10px}
-.why p{color:var(--muted);font-size:.84rem;line-height:1.65;margin:0}
-
-footer{padding:44px 0;border-top:1px solid var(--line);background:#070906}
-.foot{display:flex;justify-content:space-between;gap:28px;align-items:center}
-.foot p{max-width:520px;color:var(--muted2);font-size:.76rem;line-height:1.65;margin:0}
-
-@media(max-width:900px){
-  .nav a:not(.yt){display:none}
-  .latestGrid,.story,.campGrid,.iqGrid{grid-template-columns:1fr}
-  .socials{grid-template-columns:1fr 1fr}
-  .adventure{grid-template-columns:50px 180px 1fr}
-}
-@media(max-width:640px){
-  .wrap{width:calc(100% - 28px)}
-  .top{height:68px}
-  .brandText strong{font-size:.96rem}
-  .brandText span{font-size:.52rem}
-  .logoCrop{width:42px;height:42px}
-  .nav .yt{font-size:.68rem;padding:8px 10px}
-  .hero{padding-top:68px;min-height:86svh}
-  .hero:before{background:linear-gradient(0deg,var(--bg) 0%,rgba(10,13,9,.62) 50%,rgba(10,13,9,.25) 100%)}
-  .heroContent{padding:180px 0 48px}
-  .hero h1{font-size:clamp(2.8rem,13vw,4.1rem);line-height:1.02}
-  .hero p{font-size:.94rem;line-height:1.7}
-  .brandLineIn{min-height:62px;align-items:flex-start;justify-content:center;flex-direction:column;gap:3px;padding:12px 0}
-  .section{padding:64px 0}
-  .sectionHead h2{font-size:2.25rem}
-  .latestGrid{gap:20px}
-  .adventure{grid-template-columns:40px 1fr;gap:10px;padding:17px 0}
-  .adventure p{grid-column:2}
-  .story{gap:28px}
-  .storyQuote{font-size:2.7rem}
-  .principle{grid-template-columns:90px 1fr}
-  .camp h2{font-size:2.6rem}
-  .socials{grid-template-columns:1fr 1fr}
-  .social{padding:16px;min-height:130px}
-  .ownerBandIn,.iqTop,.foot{align-items:flex-start;flex-direction:column}
-  .signals{grid-template-columns:1fr 1fr}
-}
-</style>
-</head>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&family=Permanent+Marker&display=swap');
+@font-face{font-family:"Gabriel Weiss Friends";src:local("Gabriel Weiss' Friends Font"),local("Gabriel Weiss Friends Font")}
+:root{--bg:#080a08;--bg2:#0d120d;--paper:#ece9dc;--ink:#171a15;--text:#f3f2ec;--muted:#9ca59a;--lime:#8df000;--line:rgba(255,255,255,.12);--max:1140px;--script:"Gabriel Weiss Friends","Permanent Marker",cursive}
+*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--bg)}body{margin:0;background:var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(var(--max),calc(100% - 34px));margin:auto}
+header{position:fixed;z-index:50;left:0;right:0;top:0;height:72px;background:rgba(8,10,8,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.head{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}.wordmark{width:185px;height:54px;object-fit:contain;object-position:left center;mix-blend-mode:screen}
+nav{display:flex;gap:22px;align-items:center;font-size:.79rem;font-weight:600}nav a{color:#c8cec4}nav a:hover{color:white}.pill{border:1px solid rgba(141,240,0,.45);padding:9px 13px;border-radius:999px;color:var(--lime)}
+.hero{min-height:88svh;padding-top:72px;display:flex;align-items:flex-end;position:relative;isolation:isolate;overflow:hidden}
+.hero:after{content:"";position:absolute;inset:0;z-index:-2;background:url('https://outfit-media.s3.amazonaws.com/media/organization/rewyldoutdoors/20221122032614_AddText_11-21-10.05.25.jpg') center/cover no-repeat;filter:saturate(.72) brightness(.72)}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(8,10,8,.93) 0%,rgba(8,10,8,.66) 48%,rgba(8,10,8,.15) 78%),linear-gradient(0deg,var(--bg),transparent 34%)}
+.heroInner{position:relative;padding:130px 0 64px;max-width:720px}.eyebrow{font-size:.67rem;letter-spacing:.15em;text-transform:uppercase;color:var(--lime);font-weight:700}
+.hero h1{font:600 clamp(2.8rem,6vw,5rem)/1.03 Lora,serif;letter-spacing:-.035em;margin:14px 0 18px}.script{font-family:var(--script);font-weight:400;color:var(--lime);letter-spacing:.01em}
+.hero p{max-width:610px;font-size:1rem;line-height:1.72;color:#d2d7cf}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:27px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 16px;border-radius:999px;border:1px solid rgba(255,255,255,.2);font-size:.75rem;font-weight:700}.btn.primary{background:var(--lime);border-color:var(--lime);color:#10140d}
+.badge{position:absolute;width:155px;height:155px;right:-210px;bottom:54px;border-radius:50%;object-fit:cover;box-shadow:0 12px 42px rgba(0,0,0,.35);border:3px solid rgba(255,255,255,.08)}
+.strip{border-block:1px solid var(--line);background:#0b0e0b}.stripIn{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:24px;color:#aeb6ab;font-size:.75rem}.stripIn b{color:white}.stripIn .script{font-size:1.05rem}
+section{padding:78px 0}.alt{background:var(--bg2)}.sectionHead{max-width:740px;margin-bottom:28px}.sectionHead h2{font:600 clamp(2rem,4.4vw,3.4rem)/1.1 Lora,serif;letter-spacing:-.025em;margin:9px 0 14px}.sectionHead p{color:var(--muted);line-height:1.75;font-size:.94rem}
+.latest{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);gap:28px}.video{aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#000}.video iframe{width:100%;height:100%;border:0}.sideCopy{border-top:1px solid var(--line);padding-top:18px}.sideCopy h3{font:600 1.45rem/1.25 Lora,serif;margin:0 0 10px}.sideCopy p{color:var(--muted);line-height:1.7;font-size:.87rem}
+.gridList{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}.item{padding:22px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:42px 160px 1fr;gap:14px}.item:nth-child(odd){padding-right:28px}.item:nth-child(even){padding-left:28px;border-left:1px solid var(--line)}.num{color:var(--lime);font-family:var(--script);font-size:1rem}.item strong{font:600 1.08rem Lora,serif}.item span:last-child{color:var(--muted);font-size:.83rem;line-height:1.55}
+.story{background:var(--paper);color:var(--ink)}.storyGrid{display:grid;grid-template-columns:320px 1fr;gap:58px;align-items:center}.flameCard{background:white;border-radius:20px;padding:24px;box-shadow:0 20px 50px rgba(31,36,26,.12)}.flameCard img{width:100%;display:block}.story h2{font:600 clamp(2.2rem,4.6vw,3.8rem)/1.08 Lora,serif;letter-spacing:-.03em;margin:10px 0 16px}.story p{color:#53594f;line-height:1.78}.story .script{font-size:1.05em}.principles{margin-top:24px;border-top:1px solid rgba(23,26,21,.16)}.principle{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:15px 0;border-bottom:1px solid rgba(23,26,21,.16)}.principle b{color:#4e8500}
+.camp{background:linear-gradient(115deg,#10170f,#0b0f0b);border-block:1px solid rgba(141,240,0,.13)}.campGrid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px}.camp h2{font:600 clamp(2.1rem,4.6vw,3.7rem)/1.08 Lora,serif;margin:10px 0 16px}.camp p{color:var(--muted);line-height:1.7}.campBox{border:1px solid var(--line);border-radius:14px;padding:22px;background:rgba(255,255,255,.02)}.campBox h3{font:600 1.35rem Lora,serif;margin:0 0 5px}.campBox small{color:#7f897e}.fact{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding:10px 0;font-size:.79rem}.fact:first-of-type{margin-top:18px}.fact span:last-child{color:#dce1d9;text-align:right}
+.socials{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.social{border:1px solid var(--line);border-radius:12px;padding:18px;min-height:125px;display:flex;flex-direction:column;justify-content:space-between;background:rgba(255,255,255,.014)}.social:hover{border-color:rgba(141,240,0,.45)}.social strong{font:600 1.13rem Lora,serif}.social small{display:block;color:#788278;margin-top:4px}.arrow{color:var(--lime)}
+.owner{border-top:1px solid var(--line);padding:27px 0}.ownerIn{display:flex;justify-content:space-between;align-items:center;gap:20px}.owner p{margin:0;color:#778077;font-size:.8rem;max-width:700px;line-height:1.6}.owner button{border:1px solid var(--line);border-radius:999px;background:transparent;color:#cbd1c7;padding:9px 13px;font-size:.7rem;font-weight:700;cursor:pointer}
+#iq{display:none;padding:64px 0 80px;background:#0d120d;border-top:2px solid var(--lime)}.iqHead{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:22px}.iqHead h2{font:600 clamp(1.9rem,4vw,3.1rem)/1.08 Lora,serif;margin:6px 0 0}.demo{border:1px solid rgba(231,188,100,.32);color:#e7bc64;padding:6px 9px;border-radius:999px;font-size:.62rem;text-transform:uppercase;letter-spacing:.08em}.iqGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:15px}.panel{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#101510}.label{padding:10px 14px;border-bottom:1px solid var(--line);font-size:.64rem;color:#788177;text-transform:uppercase;letter-spacing:.1em}.mission{padding:20px}.mission h3{font:600 1.45rem/1.25 Lora,serif;margin:6px 0 9px}.mission p{color:var(--muted);font-size:.86rem;line-height:1.65}.priority{color:var(--lime);font-size:.63rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700}.todo{border-top:1px solid var(--line);padding:13px 18px;display:flex;justify-content:space-between;gap:18px}.todo b{font-size:.77rem}.todo small{display:block;color:#737c72;margin-top:3px}.signals{display:grid;grid-template-columns:1fr 1fr}.signal{padding:17px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.signal:nth-child(even){border-right:0}.signal strong{font:600 1.55rem Lora,serif}.signal span{display:block;color:#737c72;font-size:.7rem;margin-top:4px}.good{color:var(--lime)}.warn{color:#e3bd68}.bad{color:#df7c6a}.why{padding:18px}.why h3{font:600 1.15rem Lora,serif;margin:0 0 8px}.why p{margin:0;color:var(--muted);font-size:.82rem;line-height:1.6}
+footer{padding:40px 0;border-top:1px solid var(--line);background:#060806}.foot{display:flex;align-items:center;justify-content:space-between;gap:26px}.foot img{width:170px}.foot p{max-width:500px;color:#737c72;font-size:.74rem;line-height:1.6;margin:0}
+@media(max-width:900px){nav a:not(.pill){display:none}.badge{right:10px;bottom:28px;width:125px;height:125px;opacity:.9}.latest,.storyGrid,.campGrid,.iqGrid{grid-template-columns:1fr}.gridList{grid-template-columns:1fr}.item:nth-child(even){padding-left:0;border-left:0}.item:nth-child(odd){padding-right:0}.socials{grid-template-columns:1fr 1fr}.storyGrid{gap:32px}.flameCard{max-width:300px}}
+@media(max-width:640px){.wrap{width:calc(100% - 28px)}header{height:66px}.wordmark{width:145px;height:46px}.hero{padding-top:66px;min-height:82svh}.hero:before{background:linear-gradient(0deg,var(--bg),rgba(8,10,8,.56) 50%,rgba(8,10,8,.2))}.heroInner{padding:170px 0 42px}.hero h1{font-size:2.75rem}.hero p{font-size:.92rem}.badge{width:92px;height:92px;right:2px;bottom:26px}.stripIn{padding:11px 0;min-height:64px;align-items:flex-start;flex-direction:column;gap:3px;justify-content:center}section{padding:58px 0}.sectionHead h2{font-size:2.15rem}.latest{gap:20px}.item{grid-template-columns:34px 1fr;gap:9px}.item span:last-child{grid-column:2}.storyGrid{grid-template-columns:1fr}.flameCard{max-width:240px;margin:auto}.story h2,.camp h2{font-size:2.35rem}.principle{grid-template-columns:86px 1fr}.socials{grid-template-columns:1fr 1fr}.social{min-height:116px;padding:15px}.ownerIn,.iqHead,.foot{align-items:flex-start;flex-direction:column}.foot img{width:150px}}
+</style></head>
 <body>
-<header class="top">
-  <div class="wrap topin">
-    <a class="brand" href="#top">
-      <span class="logoCrop" aria-label="Official ReWyld Outdoors fire logo">
-        <img src="https://crowdmade.com/cdn/shop/products/Rewyld_Outdoors_Logo_-_Aqua_800x.jpg?v=1669089304" alt="ReWyld Outdoors logo">
-      </span>
-      <span class="brandText">
-        <strong>ReWyld Outdoors</strong>
-        <span>Get up · get out · stay wyld</span>
-      </span>
-    </a>
-    <nav class="nav">
-      <a href="#latest">Watch</a>
-      <a href="#adventures">Adventures</a>
-      <a href="#wyldcamp">Wyld Camp</a>
-      <a href="#story">Story</a>
-      <a class="yt" href="https://www.youtube.com/@ReWyldOutdoors" target="_blank">YouTube ↗</a>
-    </nav>
-  </div>
-</header>
+<header><div class="wrap head">
+  <a href="#top"><img class="wordmark" src="data:image/webp;base64,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" alt="ReWyld Outdoors"></a>
+  <nav><a href="#watch">Watch</a><a href="#adventures">Adventures</a><a href="#story">Story</a><a href="#camp">Wyld Camp</a><a class="pill" href="https://www.youtube.com/@ReWyldOutdoors" target="_blank">YouTube ↗</a></nav>
+</div></header>
 
 <main id="top">
-<section class="hero">
-  <div class="wrap heroContent">
-    <div class="kicker">Shaun & Sara Strickland · Florida</div>
-    <h1>Get up. Get out. <em>Stay Wyld.</em></h1>
-    <p>Camping, paddling, hiking, hammock camping, overlanding and outdoor skills from people who would rather be outside doing the trip than talking about doing it.</p>
-    <div class="actions">
-      <a class="btn primary" href="https://www.youtube.com/@ReWyldOutdoors" target="_blank">Watch on YouTube ↗</a>
-      <a class="btn" href="#latest">Latest adventures ↓</a>
-    </div>
-  </div>
-</section>
+<section class="hero"><div class="wrap heroInner">
+  <div class="eyebrow">Shaun & Sara Strickland · Florida</div>
+  <h1>Get up. Get out.<br><span class="script">Stay Wyld.</span></h1>
+  <p>Camping, paddling, hiking, hammock camping, overlanding and outdoor skills from people who would rather be outside doing the trip than talking about doing it.</p>
+  <div class="actions"><a class="btn primary" href="https://www.youtube.com/@ReWyldOutdoors" target="_blank">Watch ReWyld ↗</a><a class="btn" href="#watch">Latest adventures ↓</a></div>
+  <img class="badge" src="data:image/webp;base64,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" alt="ReWyld Outdoors — Entertain Inspire Instruct">
+</div></section>
 
-<div class="brandLine">
-  <div class="wrap brandLineIn">
-    <span><b>Entertain. Inspire. Instruct.</b></span>
-    <span>Camping · Kayaking · Hiking · Overlanding · Bushcraft · Florida</span>
-  </div>
-</div>
+<div class="strip"><div class="wrap stripIn"><span><b>Entertain. Inspire. Instruct.</b></span><span class="script">Camping · Kayaking · Hiking · Overlanding · Bushcraft</span></div></div>
 
-<section class="section" id="latest">
-  <div class="wrap">
-    <div class="sectionHead">
-      <div class="kicker">Latest from ReWyld</div>
-      <h2>The newest adventures, <em>straight from YouTube.</em></h2>
-      <p>The channel remains the publishing engine. New videos appear here without turning the website into another thing Shaun has to maintain.</p>
-    </div>
-    <div class="latestGrid">
-      <div class="youtubeFrame">
-        <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/videoseries?list=UUYjOX45tqwC508lq2Qa8Ebw" title="Latest ReWyld Outdoors videos" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-      <aside class="latestCopy">
-        <h3>Follow the trip while it is still fresh.</h3>
-        <p>Recent uploads cover hammock camping, Florida travel, wildlife, skills, gear, road trips and the places Shaun and Sara find along the way.</p>
-        <a class="btn" href="https://www.youtube.com/@ReWyldOutdoors/videos" target="_blank">See all videos ↗</a>
-      </aside>
-    </div>
-  </div>
-</section>
+<section id="watch"><div class="wrap">
+  <div class="sectionHead"><div class="eyebrow">Latest from ReWyld</div><h2>New adventures, straight from the channel.</h2><p>YouTube stays the publishing engine. The site showcases the newest uploads without creating another job for Shaun.</p></div>
+  <div class="latest"><div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/videoseries?list=UUYjOX45tqwC508lq2Qa8Ebw" title="Latest ReWyld Outdoors videos" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+  <aside class="sideCopy"><h3>Follow the trip while it is still fresh.</h3><p>Recent content moves between hammock camping, Florida travel, wildlife, skills, road trips, gear and the places Shaun and Sara find along the way.</p><a class="btn" href="https://www.youtube.com/@ReWyldOutdoors/videos" target="_blank">All videos ↗</a></aside></div>
+</div></section>
 
-<section class="section alt" id="adventures">
-  <div class="wrap">
-    <div class="sectionHead">
-      <div class="kicker">What ReWyld does</div>
-      <h2>More than one kind of <em>outside.</em></h2>
-      <p>The content works because it moves between trips, skills, places and gear instead of forcing everything into one narrow niche.</p>
-    </div>
-    <div class="adventureList">
-      <div class="adventure"><span class="num">01</span><strong>Hammock & camp</strong><p>Overnights, setup, weather, comfort and what actually works after dark.</p></div>
-      <div class="adventure"><span class="num">02</span><strong>Paddle</strong><p>Florida rivers, springs, coastlines and kayak-camping trips.</p></div>
-      <div class="adventure"><span class="num">03</span><strong>Explore Florida</strong><p>Old Florida, public land, trails, campgrounds and back roads.</p></div>
-      <div class="adventure"><span class="num">04</span><strong>Overland</strong><p>Vehicle-based adventures, camp systems and outdoor events.</p></div>
-      <div class="adventure"><span class="num">05</span><strong>Skills</strong><p>Bushcraft, carving and useful know-how learned by actually doing it.</p></div>
-      <div class="adventure"><span class="num">06</span><strong>Gear</strong><p>Field-tested equipment and what earns space in the kit.</p></div>
-    </div>
+<section class="alt" id="adventures"><div class="wrap">
+  <div class="sectionHead"><div class="eyebrow">What ReWyld does</div><h2>More than one kind of outside.</h2><p>The content works best when it moves naturally between trips, places, skills and gear instead of forcing everything into one narrow niche.</p></div>
+  <div class="gridList">
+    <div class="item"><span class="num">01</span><strong>Hammock & camp</strong><span>Overnights, setup, weather, comfort and what actually works after dark.</span></div>
+    <div class="item"><span class="num">02</span><strong>Paddle</strong><span>Florida rivers, springs, coastlines and kayak-camping trips.</span></div>
+    <div class="item"><span class="num">03</span><strong>Explore Florida</strong><span>Old Florida, public land, trails, campgrounds and back roads.</span></div>
+    <div class="item"><span class="num">04</span><strong>Overland</strong><span>Vehicle-based adventures, camp systems and outdoor events.</span></div>
+    <div class="item"><span class="num">05</span><strong>Skills</strong><span>Bushcraft, carving and useful know-how learned by actually doing it.</span></div>
+    <div class="item"><span class="num">06</span><strong>Gear</strong><span>Field-tested equipment and what earns space in the kit.</span></div>
   </div>
-</section>
+</div></section>
 
-<section class="section" id="story">
-  <div class="wrap story">
-    <div>
-      <div class="kicker">Why ReWyld exists</div>
-      <p class="storyQuote">Make a living.<em>Don’t forget to live.</em></p>
-    </div>
-    <div class="storyText">
-      <p>Shaun has explained that ReWyld grew from seeing how short and fragile life can be, and how easily people can spend years making a living while forgetting to actually live.</p>
-      <p>That is the useful heart of the brand. It should feel human, practical and experienced—not polished into a generic adventure-influencer identity.</p>
-      <div class="principles">
-        <div class="principle"><strong>Entertain</strong><span>Give people a reason to stay for the story.</span></div>
-        <div class="principle"><strong>Inspire</strong><span>Make somebody want to plan their own trip.</span></div>
-        <div class="principle"><strong>Instruct</strong><span>Leave them with something useful when the video ends.</span></div>
-      </div>
-    </div>
+<section class="story" id="story"><div class="wrap storyGrid">
+  <div class="flameCard"><img src="data:image/webp;base64,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" alt="ReWyld Outdoors green fire logo"></div>
+  <div><div class="eyebrow" style="color:#4e8500">Why ReWyld exists</div><h2>Make a living.<br><span class="script">Don’t forget to live.</span></h2>
+  <p>ReWyld should feel like the trip itself: practical, imperfect, funny when it needs to be, and useful when something is worth learning. Not another polished adventure-influencer template.</p>
+  <div class="principles"><div class="principle"><b>Entertain</b><span>Give people a reason to stay for the story.</span></div><div class="principle"><b>Inspire</b><span>Make somebody want to plan their own trip.</span></div><div class="principle"><b>Instruct</b><span>Leave them knowing something useful when the video ends.</span></div></div>
   </div>
-</section>
+</div></section>
 
-<section class="section camp" id="wyldcamp">
-  <div class="wrap campGrid">
-    <div>
-      <div class="kicker">Wyld Camp 2026 · 4th annual</div>
-      <h2>October <span>23–25</span><br>Doe Lake, Florida</h2>
-      <p>Two nights of camping with tent sites, overlanding, limited hammock camping, classes, fishing, boating, kayaking, community time and Saturday dinner.</p>
-      <div class="actions">
-        <a class="btn primary" href="https://www.eventbrite.com/e/wyld-camp-2026-by-rewyld-outdoors-tickets-1990026266132" target="_blank">Tickets & details ↗</a>
-      </div>
-    </div>
-    <div class="campCard">
-      <strong>Doe Lake Campground</strong>
-      <small>Umatilla, Florida · Friday Oct 23 – Sunday Oct 25</small>
-      <div class="campFacts">
-        <div class="campFact"><span>Adult weekend</span><span>$35</span></div>
-        <div class="campFact"><span>Teens 13–17</span><span>$20</span></div>
-        <div class="campFact"><span>Children 12 & under</span><span>Free</span></div>
-        <div class="campFact"><span>Saturday dinner</span><span>Included</span></div>
-        <div class="campFact"><span>Hosted by</span><span>Shaun & Sara</span></div>
-      </div>
-    </div>
-  </div>
-</section>
+<section class="camp" id="camp"><div class="wrap campGrid">
+  <div><div class="eyebrow">Wyld Camp 2026 · 4th annual</div><h2>October 23–25<br><span class="script">Doe Lake, Florida</span></h2><p>Two nights of camping with tent sites, overlanding, limited hammock camping, classes, fishing, boating, kayaking, community time and Saturday dinner.</p><div class="actions"><a class="btn primary" href="https://www.eventbrite.com/e/wyld-camp-2026-by-rewyld-outdoors-tickets-1990026266132" target="_blank">Tickets & details ↗</a></div></div>
+  <div class="campBox"><h3>Doe Lake Campground</h3><small>Umatilla, Florida</small><div class="fact"><span>Adult weekend</span><span>$35</span></div><div class="fact"><span>Teens 13–17</span><span>$20</span></div><div class="fact"><span>Children 12 & under</span><span>Free</span></div><div class="fact"><span>Saturday dinner</span><span>Included</span></div><div class="fact"><span>Hosted by</span><span>Shaun & Sara</span></div></div>
+</div></section>
 
-<section class="section alt">
-  <div class="wrap">
-    <div class="sectionHead">
-      <div class="kicker">Keep up with ReWyld</div>
-      <h2>One home. Every way to <em>follow along.</em></h2>
-    </div>
-    <div class="socials">
-      <a class="social" href="https://www.youtube.com/@ReWyldOutdoors" target="_blank"><span class="arrow">↗</span><div><strong>YouTube</strong><small>Full adventures & skills</small></div></a>
-      <a class="social" href="https://www.instagram.com/rewyldoutdoors/" target="_blank"><span class="arrow">↗</span><div><strong>Instagram</strong><small>Short-form & trip updates</small></div></a>
-      <a class="social" href="https://www.facebook.com/Rewyldoutdoors/" target="_blank"><span class="arrow">↗</span><div><strong>Facebook</strong><small>Community & events</small></div></a>
-      <a class="social" href="https://www.patreon.com/ReWyldOutdoors" target="_blank"><span class="arrow">↗</span><div><strong>Patreon</strong><small>Support future adventures</small></div></a>
-    </div>
-  </div>
-</section>
+<section class="alt"><div class="wrap"><div class="sectionHead"><div class="eyebrow">Follow the journey</div><h2>One home for the whole ReWyld world.</h2></div>
+<div class="socials"><a class="social" href="https://www.youtube.com/@ReWyldOutdoors" target="_blank"><span class="arrow">↗</span><div><strong>YouTube</strong><small>Full adventures & skills</small></div></a><a class="social" href="https://www.instagram.com/rewyldoutdoors/" target="_blank"><span class="arrow">↗</span><div><strong>Instagram</strong><small>Short-form & trip updates</small></div></a><a class="social" href="https://www.facebook.com/Rewyldoutdoors/" target="_blank"><span class="arrow">↗</span><div><strong>Facebook</strong><small>Community & events</small></div></a><a class="social" href="https://www.patreon.com/ReWyldOutdoors" target="_blank"><span class="arrow">↗</span><div><strong>Patreon</strong><small>Support future adventures</small></div></a></div></div></section>
 
-<section class="ownerBand">
-  <div class="wrap ownerBandIn">
-    <p>The public website is backed by a private creator dashboard designed to identify what content is working, what is being neglected and what Shaun should do next.</p>
-    <button class="ownerBtn" onclick="toggleIQ()">Preview Creator IQ ↓</button>
-  </div>
-</section>
-
-<section id="iq">
-  <div class="wrap">
-    <div class="iqTop">
-      <div>
-        <div class="kicker">Private creator dashboard</div>
-        <h2>What should Shaun do <em style="color:var(--green-soft)">next?</em></h2>
-      </div>
-      <span class="demo">Demo KPI mode</span>
-    </div>
-    <div class="iqGrid">
-      <div class="panel">
-        <div class="panelLabel">Today’s field brief</div>
-        <div class="mission">
-          <div class="priority">Highest priority</div>
-          <h3>Turn the latest long-form upload into short-form.</h3>
-          <p>The system sees a fresh YouTube upload but no matching short-form activity. Reuse the strongest moments before filming something separate.</p>
-        </div>
-        <div class="todo"><div><b>1. Pick 3 clip moments</b><small>Hook · useful moment · personality moment</small></div><span class="priority">Today</span></div>
-        <div class="todo"><div><b>2. Publish one Reel / Short</b><small>Use the long-form upload as the destination</small></div><span class="priority">Next</span></div>
-        <div class="todo"><div><b>3. Record the result</b><small>Keep the advice only if the numbers improve</small></div><span class="priority">Learn</span></div>
-      </div>
-      <div class="panel">
-        <div class="panelLabel">Signals behind the recommendation</div>
-        <div class="signals">
-          <div class="signal"><strong class="good">↑ 18%</strong><span>Long-form watch velocity</span></div>
-          <div class="signal"><strong class="warn">5 / 12</strong><span>Short-form posts vs target</span></div>
-          <div class="signal"><strong>3</strong><span>Videos not yet repurposed</span></div>
-          <div class="signal"><strong class="bad">↓ 9%</strong><span>Social referral traffic</span></div>
-        </div>
-        <div class="why">
-          <h3>Every recommendation shows its evidence.</h3>
-          <p>Shaun can act on it, dismiss it, and later compare the outcome. Demo figures remain clearly labelled until the real YouTube and Meta analytics are connected.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="owner"><div class="wrap ownerIn"><p>The public site is backed by a private creator dashboard that identifies what content is working, what is being neglected and what Shaun should do next.</p><button onclick="toggleIQ()">Preview Creator IQ ↓</button></div></div>
+<section id="iq"><div class="wrap"><div class="iqHead"><div><div class="eyebrow">Private creator dashboard</div><h2>What should Shaun do <span class="script">next?</span></h2></div><span class="demo">Demo KPI mode</span></div>
+<div class="iqGrid"><div class="panel"><div class="label">Today’s field brief</div><div class="mission"><div class="priority">Highest priority</div><h3>Turn the latest long-form upload into short-form.</h3><p>The system sees a fresh YouTube upload but no matching short-form activity. Reuse the strongest moments before filming something separate.</p></div><div class="todo"><div><b>1. Pick 3 clip moments</b><small>Hook · useful moment · personality moment</small></div><span class="priority">Today</span></div><div class="todo"><div><b>2. Publish one Reel / Short</b><small>Use the long-form upload as the destination</small></div><span class="priority">Next</span></div><div class="todo"><div><b>3. Record the result</b><small>Keep the advice only if the numbers improve</small></div><span class="priority">Learn</span></div></div>
+<div class="panel"><div class="label">Signals behind the recommendation</div><div class="signals"><div class="signal"><strong class="good">↑ 18%</strong><span>Long-form watch velocity</span></div><div class="signal"><strong class="warn">5 / 12</strong><span>Short-form posts vs target</span></div><div class="signal"><strong>3</strong><span>Videos not yet repurposed</span></div><div class="signal"><strong class="bad">↓ 9%</strong><span>Social referral traffic</span></div></div><div class="why"><h3>Every recommendation shows its evidence.</h3><p>Shaun can act on it, dismiss it, and later compare the outcome. Demo figures stay labelled until the real platform analytics are connected.</p></div></div></div>
+</div></section>
 </main>
 
-<footer>
-  <div class="wrap foot">
-    <a class="brand" href="#top">
-      <span class="logoCrop"><img src="https://crowdmade.com/cdn/shop/products/Rewyld_Outdoors_Logo_-_Aqua_800x.jpg?v=1669089304" alt="ReWyld Outdoors logo"></span>
-      <span class="brandText"><strong>ReWyld Outdoors</strong><span>Established 2019</span></span>
-    </a>
-    <p>Adventures, Wyld Camp, social channels, support and the private intelligence layer behind the ReWyld content strategy.</p>
-  </div>
-</footer>
-
-<script>
-function toggleIQ(){
-  const el=document.getElementById('iq');
-  const open=getComputedStyle(el).display!=='none';
-  el.style.display=open?'none':'block';
-  if(!open)setTimeout(()=>el.scrollIntoView({behavior:'smooth',block:'start'}),30)
-}
-</script>
-</body>
-</html>
+<footer><div class="wrap foot"><img src="data:image/webp;base64,UklGRpYIAABXRUJQVlA4IIoIAADQOACdASoEAU4BPu12t1WppqUjIXRImTAdiWlu4XdhG+wt7Fv9P4a+KP2z7hes7j7tN/k/4B/feZfeX8hdQL8d/nO7KgA+uPfHakGQB+q/EU0AP5p/nvRm0P/XoScgKXVT4oWbDtNUuqnxQs2HaapdVPihZsO01S6qfFCzYdpql1U+KFmw7TVLqp8ULNh2mqXVT4oWbDtKAjsO0knri8HVBuBinns4+APONw5D3k+tr8w3y46g/71Yz/2Rf8eIavKmpmK/C8IOXhqJ7shSb01Z9cKFlxdvvPlr1Pxbty5uxIT2JJ7A/fSD5pSthhNz4nP6DDOu0H8bpE4e+eIMgYPpeVWeJvYeuAezAJiB4mrSGCp8TTKsltPaBcUSE6n22th1mGTmtd+afaDaUZKyjdbxbUBaVgHdScYcnAv5cDPZPw0Qq9k3x35/1Kry292zY4N6YrQIyvFaeqoAe7kQW/ID40dwTwhd5M/v0tZxlUDPH9lLEOil0sD6OcTqk1HcAYVSlEzuIrGyPLpqqWq5VIHxQs2HaapdVPihZsO01S6qfFCzYdpql1U+KFmw7TVLqp8ULNh2mqXVT4oWbDtNUuqnxQs2HaapdVPihZsO0z4AAP7/wXAAAAAb52saZgmOPb1lF2rbfomljvTf6Qq3iyOpKcJfgqgE/60OhtZa5LKyqlU7STJVvlfb1EiraqxFBg9BQhACGd1/IxYD0OLnBA6eEMh+CA1T6pRZQJvwQfXjB37u3dvjxpjS1LbmDQJWpWvMHODpzcaP6Cd229MJKww8A3bHmBL/fgtdJhy+yq9owQkb3RlJ3Ehfb57WwtvqwRsLwgPqLkVfMlYEFjBK2K0WJZL1Xc5JdDp7epXpVF20AoDjf+XV2MDcKIzfEJnW5Cf3f3cWKj2pfNU6HnMs/vBmYtkmOSK1rfk7tlMWVEVbU8PY0ZKFr3wOo38DoZqgvrv/ZhUyA/f94z3A4PY8STBXRVTf44Y0WuR6Od7N3wzZ397R1EygPfV/0/QrgGhchs172ZG4HbovF2/a77YbG1OIlXfwLTjdQMENTqH4qg6PXcIrn0yr8kMnui/v4z1Y241ps01vVyf7BbIp+ObVUhWpO5+M0J8Nrb82cHCkm4B7wf7ihR+eVU2X9WwBedG0uIcyptophRrJmZtiscij+R5AyfCbXcMKZ/+DQwstK3WC65YBb8ugy76A9BMh3hxzT1I4lP7SnBs8VHgCZ/yH4o06uNhwUShx3Mfx3b9Ru85Rsv+ZjKWm4A9Lxhx6O57qaXT8z+F8C3P+drYWJG50kcBZuPyYojK5V14hRJO030RhicHybWSXItFCtEHzU81X7oyrxmAU243OrHjp+DxoRV9UCIpO+V6Too0GAQQ5VFmtULZZ7uRK89QWOAGaEbv5LAJ7OH9w8Hq45jKmac7/weIPC1r066/mnZccT9wUXHz5Gfnj71IbYdpxIZXSyqjX+OggvK42w4GOZgFsTo8dVwC0fUUwg/G21PzRV+l8T40dSo+BmmFZ9ccxfjV3HQJhLm6pYmzAeSNHWM3ectzAsJmXdf8do+r0ZPHznlHst7VdfOgah9PCPTACZQO+ATpRpJtfAntZWPWZpD+Re0lj0Ueq30dJuJ0TOq4zAJ4M+tE9Qt+tuRip9FJLb7K1fHzHgPknfWvyJXUKhTFKjP1NPK3ltSp6ft4k+jMa3NiCZJadZKB6HfakhNcDZ7wM+PxAfm7Zew8F8F1/KafXXAESwB0ZNCjtM6bHBi9fGdPdJWyq7l12Iv9IC/bUIsZLqbuIAZLNI4CLVxmni+Y/3MDY17BZhMPsPuQW+jgr1sFxfR+c71IFzpQHCp9sG18+SCMjQlRyWRJyYybywTjVriSCGf6pcu3Ah5Q4tvU9AezzjG6NpkR9Fbz+K0rQN7mm+Q8uekT2W4BR8dW88v1J9ClFXWGHxWpDftGdLr/sE/1hx46cUsO12EQlK8p0sSW3J9mLXBDvBThafp/L3RY+TnbckzRTg5XYCZSztEw8/9g1J8vCci+2XNWTLOz+0aDko03b+WcXT5vbV4vEY7w0n+8eA/VZf/2VUwYoBJgKG9GL7NKEJv0tviVY8ofhBAIEjRZO4Uwt5+27vsjJ/mRf0VrOHsML4px89kl1Grv9vryciQnKaCN/qIZIr+gMI6q7ZCZY97f6FALPF4n6KRyVvYJhk9eSSc+tKhK/QjZqKNCz4i17Sl9R7CBq19Z7Dnq5XB2KKQQ6HwIxXBCvYFE5aHPo6NEk+O8Ev9LcwFt2qMFAPcMMfV54cdoxGofdnMECnhE8PhslWLVJ1xLCw+FK3obJkgYPAeYSUCdSQOInUOpmTVEQrlh5US2Xs8mxactwmUf96LiQSaDRvMTPV+eT4fOeHGtac8PpVjjgFW779Roiz8IbjwLJcyjuZWxyo/P6z61Gs2WvjSNRZH24y+ULBLd+ReczX5fbk3rEKNwE9aXVjw+7sIuP4+yTP5pVv0vhVzuC8ZfMBjIarTlxQ9eHQ/+D9/gBh9EjG4tXxHxnh/Fpt5U5ojb4POPWsTc8RI7FQiMnArjwZ7+4e8KZ28MZRLstCJHlR5iNlv3VDQwznus+vHTgZpvf9rXkgzwsLTD70/FsGo2T1uO2zneTBB/OFU28QfS5yOdryb7vlseg63Bv1hdRw71LWmHiDGoBEYmlnLvSJ+9syn0H6gFGoGX/iM5H+T2ECCDypUlwYeOGr3N//ooLKc6NGQeTfauDvZFosxv9Klus3250uPbDJizx0xRV+if9xVp5NGz3jIGCU17mQOhz4eCr8DTaOVBcRQcoXS3VriywGiazfyjGpl/jQ495rg9jvdNG/VrhUE2LIZdEkdSQmW7fz7gDKu6bBrusMbtI2UrPK/7+wDvFK6FLnBEgIYy0A+gAAAAAAAAAAA==" alt="ReWyld Outdoors"><p>Adventures, Wyld Camp, social channels, support and the private intelligence layer behind the ReWyld content strategy.</p></div></footer>
+<script>function toggleIQ(){const e=document.getElementById('iq'),o=getComputedStyle(e).display!=='none';e.style.display=o?'none':'block';if(!o)setTimeout(()=>e.scrollIntoView({behavior:'smooth'}),30)}</script>
+</body></html>
