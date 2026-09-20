@@ -21,7 +21,7 @@ nav{display:flex;gap:22px;align-items:center;font-size:.79rem;font-weight:600}na
 .badge{position:absolute;width:155px;height:155px;right:-210px;bottom:54px;border-radius:50%;object-fit:cover;box-shadow:0 12px 42px rgba(0,0,0,.35);border:3px solid rgba(255,255,255,.08)}
 .strip{border-block:1px solid var(--line);background:#0b0e0b}.stripIn{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:24px;color:#aeb6ab;font-size:.75rem}.stripIn b{color:white}.stripIn .script{font-size:1.05rem}
 section{padding:78px 0}.alt{background:var(--bg2)}.sectionHead{max-width:740px;margin-bottom:28px}.sectionHead h2{font:600 clamp(2rem,4.4vw,3.4rem)/1.1 Lora,serif;letter-spacing:-.025em;margin:9px 0 14px}.sectionHead p{color:var(--muted);line-height:1.75;font-size:.94rem}
-.latest{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);gap:28px}.video{aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#000}.video iframe{width:100%;height:100%;border:0}.sideCopy{border-top:1px solid var(--line);padding-top:18px}.sideCopy h3{font:600 1.45rem/1.25 Lora,serif;margin:0 0 10px}.sideCopy p{color:var(--muted);line-height:1.7;font-size:.87rem}
+.latest{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);gap:28px}.video{aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#000;position:relative;display:block}.video img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s ease}.video:hover img{transform:scale(1.018)}.videoShade{position:absolute;inset:0;display:flex;align-items:flex-end;gap:14px;padding:20px;background:linear-gradient(0deg,rgba(0,0,0,.84),rgba(0,0,0,.05) 60%)}.playCircle{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;flex:0 0 auto;background:var(--lime);color:#10140d;font-size:1rem;padding-left:2px}.videoMeta{min-width:0}.videoMeta small{display:block;color:var(--lime);font-size:.64rem;text-transform:uppercase;letter-spacing:.09em;font-weight:700;margin-bottom:4px}.videoMeta strong{display:block;font:600 clamp(1rem,2.1vw,1.42rem)/1.22 Lora,serif;text-shadow:0 2px 8px rgba(0,0,0,.45)}.sideCopy{border-top:1px solid var(--line);padding-top:18px}.sideCopy h3{font:600 1.45rem/1.25 Lora,serif;margin:0 0 10px}.sideCopy p{color:var(--muted);line-height:1.7;font-size:.87rem}
 .gridList{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}.item{padding:22px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:42px 160px 1fr;gap:14px}.item:nth-child(odd){padding-right:28px}.item:nth-child(even){padding-left:28px;border-left:1px solid var(--line)}.num{color:var(--lime);font-family:var(--script);font-size:1rem}.item strong{font:600 1.08rem Lora,serif}.item span:last-child{color:var(--muted);font-size:.83rem;line-height:1.55}
 .story{background:var(--paper);color:var(--ink)}.storyGrid{display:grid;grid-template-columns:320px 1fr;gap:58px;align-items:center}.flameCard{background:white;border-radius:20px;padding:24px;box-shadow:0 20px 50px rgba(31,36,26,.12)}.flameCard img{width:100%;display:block}.story h2{font:600 clamp(2.2rem,4.6vw,3.8rem)/1.08 Lora,serif;letter-spacing:-.03em;margin:10px 0 16px}.story p{color:#53594f;line-height:1.78}.story .script{font-size:1.05em}.principles{margin-top:24px;border-top:1px solid rgba(23,26,21,.16)}.principle{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:15px 0;border-bottom:1px solid rgba(23,26,21,.16)}.principle b{color:#4e8500}
 .camp{background:linear-gradient(115deg,#10170f,#0b0f0b);border-block:1px solid rgba(141,240,0,.13)}.campGrid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px}.camp h2{font:600 clamp(2.1rem,4.6vw,3.7rem)/1.08 Lora,serif;margin:10px 0 16px}.camp p{color:var(--muted);line-height:1.7}.campBox{border:1px solid var(--line);border-radius:14px;padding:22px;background:rgba(255,255,255,.02)}.campBox h3{font:600 1.35rem Lora,serif;margin:0 0 5px}.campBox small{color:#7f897e}.fact{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding:10px 0;font-size:.79rem}.fact:first-of-type{margin-top:18px}.fact span:last-child{color:#dce1d9;text-align:right}
@@ -38,7 +38,7 @@ section{padding:78px 0}.alt{background:var(--bg2)}.sectionHead{max-width:740px;m
 .rewardPts{font-family:var(--script);font-size:1.15rem;color:var(--lime)}
 .rewardStep strong{display:block;font:600 1.02rem Lora,serif}
 .rewardStep small{display:block;color:#758075;font-size:.72rem;margin-top:3px}
-.rewardType{font-size:.61rem;text-transform:uppercase;letter-spacing:.08em;color:#899187;border:1px solid var(--line);border-radius:999px;padding:5px 7px;white-space:nowrap}
+.rewardType{font-size:.61rem;text-transform:uppercase;letter-spacing:.08em;color:#899187;border:1px solid var(--line);border-radius:999px;padding:5px 7px;white-space:nowrap}.rewardAccount{margin-top:20px;border:1px solid rgba(141,240,0,.22);border-radius:12px;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:20px;background:rgba(141,240,0,.025)}.rewardAccount span{display:block;color:#7f897f;font-size:.66rem;text-transform:uppercase;letter-spacing:.08em}.rewardAccount strong{display:block;font:600 1.18rem Lora,serif;margin-top:3px}.rewardAccount small{color:#7c867b;font-size:.7rem;text-align:right}.rewardControls{display:flex;align-items:center;justify-content:flex-end;gap:7px;flex-wrap:wrap}.rewardOpen,.rewardClaim{border:1px solid var(--line);background:transparent;color:#d9ded5;border-radius:999px;padding:7px 9px;font-size:.65rem;font-weight:700;cursor:pointer}.rewardOpen:hover,.rewardClaim:hover{border-color:var(--lime);color:var(--lime)}.rewardClaim:disabled{opacity:.45;cursor:default}.claimStatus{display:block;width:100%;text-align:right;color:#7d877c;font-size:.61rem}.claimStatus.pending{color:#e3bd68}.claimStatus.verified{color:var(--lime)}.claimStatus.rejected{color:#df7c6a}
 .rewardBonus{margin-top:20px;padding:18px;border:1px solid rgba(141,240,0,.26);border-radius:12px;background:rgba(141,240,0,.035)}
 .rewardBonus strong{font:600 1.1rem Lora,serif;color:white}.rewardBonus p{color:var(--muted);font-size:.82rem;line-height:1.6;margin:7px 0 0}
 .rewardGrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
@@ -48,7 +48,7 @@ section{padding:78px 0}.alt{background:var(--bg2)}.sectionHead{max-width:740px;m
 .rewardCard .btn{margin-top:16px}
 .rewardLegal{margin-top:18px;color:#657066;font-size:.68rem;line-height:1.55}
 @media(max-width:900px){.rewardsIntro{grid-template-columns:1fr}.rewardsStamp{justify-content:flex-start}.rewardsStamp img{width:210px}}
-@media(max-width:640px){.rewardStep{grid-template-columns:60px 1fr}.rewardType{grid-column:2;justify-self:start}.rewardGrid{grid-template-columns:1fr}.rewardsIntro{gap:28px}}
+@media(max-width:640px){.rewardStep{grid-template-columns:60px 1fr}.rewardControls{grid-column:2;justify-content:flex-start}.claimStatus{text-align:left}.rewardAccount{align-items:flex-start;flex-direction:column}.rewardAccount small{text-align:left}.rewardType{grid-column:2;justify-self:start}.rewardGrid{grid-template-columns:1fr}.rewardsIntro{gap:28px}}
 
 .owner{border-top:1px solid var(--line);padding:27px 0}.ownerIn{display:flex;justify-content:space-between;align-items:center;gap:20px}.owner p{margin:0;color:#778077;font-size:.8rem;max-width:700px;line-height:1.6}.owner button{border:1px solid var(--line);border-radius:999px;background:transparent;color:#cbd1c7;padding:9px 13px;font-size:.7rem;font-weight:700;cursor:pointer}
 #iq{display:none;padding:64px 0 80px;background:#0d120d;border-top:2px solid var(--lime)}.iqHead{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:22px}.iqHead h2{font:600 clamp(1.9rem,4vw,3.1rem)/1.08 Lora,serif;margin:6px 0 0}.demo{border:1px solid rgba(231,188,100,.32);color:#e7bc64;padding:6px 9px;border-radius:999px;font-size:.62rem;text-transform:uppercase;letter-spacing:.08em}.iqGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:15px}.panel{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#101510}.label{padding:10px 14px;border-bottom:1px solid var(--line);font-size:.64rem;color:#788177;text-transform:uppercase;letter-spacing:.1em}.mission{padding:20px}.mission h3{font:600 1.45rem/1.25 Lora,serif;margin:6px 0 9px}.mission p{color:var(--muted);font-size:.86rem;line-height:1.65}.priority{color:var(--lime);font-size:.63rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700}.todo{border-top:1px solid var(--line);padding:13px 18px;display:flex;justify-content:space-between;gap:18px}.todo b{font-size:.77rem}.todo small{display:block;color:#737c72;margin-top:3px}.signals{display:grid;grid-template-columns:1fr 1fr}.signal{padding:17px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.signal:nth-child(even){border-right:0}.signal strong{font:600 1.55rem Lora,serif}.signal span{display:block;color:#737c72;font-size:.7rem;margin-top:4px}.good{color:var(--lime)}.warn{color:#e3bd68}.bad{color:#df7c6a}.why{padding:18px}.why h3{font:600 1.15rem Lora,serif;margin:0 0 8px}.why p{margin:0;color:var(--muted);font-size:.82rem;line-height:1.6}
@@ -75,8 +75,16 @@ footer{padding:40px 0;border-top:1px solid var(--line);background:#060806}.foot{
 
 <section id="watch"><div class="wrap">
   <div class="sectionHead"><div class="eyebrow">Latest from ReWyld</div><h2>New adventures, straight from the channel.</h2><p>YouTube stays the publishing engine. The site showcases the newest uploads without turning the website into another thing ReWyld Outdoors has to maintain.</p></div>
-  <div class="latest"><div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/videoseries?list=UUYjOX45tqwC508lq2Qa8Ebw" title="Latest ReWyld Outdoors videos" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-  <aside class="sideCopy"><h3>Follow the trip while it is still fresh.</h3><p>Recent content moves between hammock camping, Florida travel, wildlife, skills, road trips, gear and the places ReWyld Outdoors finds along the way.</p><a class="btn" href="https://www.youtube.com/@ReWyldOutdoors/videos" target="_blank">All videos ↗</a></aside></div>
+  <div class="latest">
+    <a class="video" id="latestYoutubeCard" href="https://www.youtube.com/@ReWyldOutdoors/videos" target="_blank" rel="noopener">
+      <img id="latestYoutubeThumb" src="https://outfit-media.s3.amazonaws.com/media/organization/rewyldoutdoors/20221122032614_AddText_11-21-10.05.25.jpg" alt="Latest ReWyld Outdoors YouTube upload">
+      <div class="videoShade">
+        <span class="playCircle">▶</span>
+        <div class="videoMeta"><small>Watch on YouTube</small><strong id="latestYoutubeTitle">Open the latest ReWyld Outdoors upload</strong></div>
+      </div>
+    </a>
+    <aside class="sideCopy"><h3 id="latestYoutubeSideTitle">Watch where the view belongs.</h3><p>This preview does not play on the ReWyld website. Tapping it opens the actual upload on YouTube so the viewing session happens on the channel itself.</p><a class="btn" href="https://www.youtube.com/@ReWyldOutdoors/videos" target="_blank" rel="noopener">All videos ↗</a></aside>
+  </div>
 </div></section>
 
 <section class="alt" id="adventures"><div class="wrap">
@@ -115,11 +123,12 @@ footer{padding:40px 0;border-top:1px solid var(--line);background:#060806}.foot{
       <div class="eyebrow">ReWyld Rewards</div>
       <h2>Follow the whole adventure.<br><span class="script">Get rewarded for it.</span></h2>
       <p>YouTube gets the full adventures. Instagram gets the short moments. Facebook carries the community and events. The point of ReWyld Rewards is to give people a reason to stay connected across the whole ReWyld Outdoors ecosystem instead of following one channel and missing the rest.</p>
+      <div class="rewardAccount"><div><span>Your ReWyld Rewards balance</span><strong id="rewardBalance">0 verified points</strong></div><small id="rewardBackendState">Connected to the ReWyld rewards ledger</small></div>
       <div class="rewardSteps">
-        <div class="rewardStep"><span class="rewardPts">+100</span><div><strong>Subscribe on YouTube</strong><small>Long-form adventures, skills and trip stories.</small></div><span class="rewardType">Rewards points</span></div>
-        <div class="rewardStep"><span class="rewardPts">+75</span><div><strong>Follow on Instagram</strong><small>Short-form clips, trip moments and behind-the-scenes content.</small></div><span class="rewardType">Rewards points</span></div>
-        <div class="rewardStep"><span class="rewardPts">+75</span><div><strong>Follow on Facebook</strong><small>Community posts, event news and Wyld Camp updates.</small></div><span class="rewardType">Rewards points</span></div>
-        <div class="rewardStep"><span class="rewardPts">+250</span><div><strong>Attend a ReWyld event</strong><small>Check in at eligible events and keep building your rewards balance.</small></div><span class="rewardType">Rewards points</span></div>
+        <div class="rewardStep" data-action="youtube_subscribe"><span class="rewardPts">+100</span><div><strong>Subscribe on YouTube</strong><small>Long-form adventures, skills and trip stories.</small></div><div class="rewardControls"><a class="rewardOpen" data-reward-open="youtube_subscribe" data-platform="youtube" href="https://www.youtube.com/@ReWyldOutdoors" target="_blank" rel="noopener">Open YouTube ↗</a><button class="rewardClaim" data-claim="youtube_subscribe">Claim points</button><span class="claimStatus" id="status-youtube_subscribe">Verification required</span></div></div>
+        <div class="rewardStep" data-action="instagram_follow"><span class="rewardPts">+75</span><div><strong>Follow on Instagram</strong><small>Short-form clips, trip moments and behind-the-scenes content.</small></div><div class="rewardControls"><a class="rewardOpen" data-reward-open="instagram_follow" data-platform="instagram" href="https://www.instagram.com/rewyldoutdoors/" target="_blank" rel="noopener">Open Instagram ↗</a><button class="rewardClaim" data-claim="instagram_follow">Claim points</button><span class="claimStatus" id="status-instagram_follow">Verification required</span></div></div>
+        <div class="rewardStep" data-action="facebook_follow"><span class="rewardPts">+75</span><div><strong>Follow on Facebook</strong><small>Community posts, event news and Wyld Camp updates.</small></div><div class="rewardControls"><a class="rewardOpen" data-reward-open="facebook_follow" data-platform="facebook" href="https://www.facebook.com/Rewyldoutdoors/" target="_blank" rel="noopener">Open Facebook ↗</a><button class="rewardClaim" data-claim="facebook_follow">Claim points</button><span class="claimStatus" id="status-facebook_follow">Verification required</span></div></div>
+        <div class="rewardStep" data-action="event_attendance"><span class="rewardPts">+250</span><div><strong>Attend a ReWyld event</strong><small>Check in at eligible events and keep building your rewards balance.</small></div><div class="rewardControls"><a class="rewardOpen" data-reward-open="event_attendance" data-platform="event" href="https://www.eventbrite.com/e/wyld-camp-2026-by-rewyld-outdoors-tickets-1990026266132" target="_blank" rel="noopener">Event details ↗</a><button class="rewardClaim" data-claim="event_attendance" data-subject="wyld-camp-2026">Claim after attending</button><span class="claimStatus" id="status-event_attendance">Event check-in required</span></div></div>
       </div>
       <div class="rewardBonus"><strong>Connect every free ReWyld social and earn a completion bonus.</strong><p>The website can verify each channel connection, show progress, and make the next action obvious rather than relying on people to remember where else ReWyld Outdoors posts.</p></div>
     </div>
@@ -130,7 +139,7 @@ footer{padding:40px 0;border-top:1px solid var(--line);background:#060806}.foot{
       <div class="eyebrow">Earn, then redeem</div>
       <h3>Points unlock guaranteed ReWyld perks.</h3>
       <p>Use points for things with a guaranteed value: merch rewards, event perks, member-only items, discounts or other benefits ReWyld Outdoors chooses to release. The admin can change the point values without rebuilding the website.</p>
-      <a class="btn" href="#rewards">Rewards account — coming next</a>
+      <a class="btn" href="#rewards">Your balance is tracked on this device</a>
     </div>
     <div class="rewardCard">
       <div class="eyebrow">The Wyld Draw</div>
@@ -150,5 +159,161 @@ footer{padding:40px 0;border-top:1px solid var(--line);background:#060806}.foot{
 </main>
 
 <footer><div class="wrap foot"><img src="data:image/webp;base64,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" alt="ReWyld Outdoors"><p>Adventures, Wyld Camp, social channels, support and the private intelligence layer behind the ReWyld content strategy.</p></div></footer>
-<script>function toggleIQ(){const e=document.getElementById('iq'),o=getComputedStyle(e).display!=='none';e.style.display=o?'none':'block';if(!o)setTimeout(()=>e.scrollIntoView({behavior:'smooth'}),30)}</script>
+
+<script>
+const REWYLD_API="https://vvjjaqdsexsfpfmkdvxy.supabase.co/functions/v1/rewyld-public";
+let latestVideoId=null;
+let latestVideoTitle=null;
+
+function visitorId(){
+  let id=localStorage.getItem("rewyld_visitor_id");
+  if(!id){
+    id=crypto.randomUUID();
+    localStorage.setItem("rewyld_visitor_id",id);
+  }
+  return id;
+}
+
+async function rewyldPost(payload){
+  const r=await fetch(REWYLD_API,{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({...payload,visitor_id:visitorId()}),
+    keepalive:true
+  });
+  if(!r.ok) throw new Error("Backend request failed");
+  return r.json();
+}
+
+function trackOutbound(eventType,platform,targetUrl,contentId=null,contentTitle=null,metadata={}){
+  fetch(REWYLD_API,{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({
+      type:"outbound_click",
+      visitor_id:visitorId(),
+      event_type:eventType,
+      platform,
+      target_url:targetUrl,
+      content_id:contentId,
+      content_title:contentTitle,
+      metadata
+    }),
+    keepalive:true
+  }).catch(()=>{});
+}
+
+async function loadLatestYoutube(){
+  try{
+    const r=await fetch(REWYLD_API+"?op=latest_youtube",{cache:"no-store"});
+    if(!r.ok) throw new Error();
+    const v=await r.json();
+    latestVideoId=v.video_id;
+    latestVideoTitle=v.title;
+    const card=document.getElementById("latestYoutubeCard");
+    const img=document.getElementById("latestYoutubeThumb");
+    const title=document.getElementById("latestYoutubeTitle");
+    if(card&&v.watch_url) card.href=v.watch_url;
+    if(img&&v.thumbnail_url) img.src=v.thumbnail_url;
+    if(title&&v.title) title.textContent=v.title;
+  }catch{
+    const title=document.getElementById("latestYoutubeTitle");
+    if(title) title.textContent="Open the latest ReWyld Outdoors uploads on YouTube";
+  }
+}
+
+function renderClaimStatus(actionId,status){
+  const el=document.getElementById("status-"+actionId);
+  if(!el) return;
+  el.className="claimStatus"+(status?" "+status:"");
+  if(status==="verified") el.textContent="Verified · points awarded";
+  else if(status==="pending") el.textContent="Pending verification";
+  else if(status==="rejected") el.textContent="Verification rejected";
+  else el.textContent=actionId==="event_attendance"?"Event check-in required":"Verification required";
+}
+
+async function loadRewards(){
+  try{
+    const r=await fetch(REWYLD_API+"?op=rewards_status&visitor_id="+encodeURIComponent(visitorId()),{cache:"no-store"});
+    if(!r.ok) throw new Error();
+    const data=await r.json();
+    document.getElementById("rewardBalance").textContent=(data.points_balance||0)+" verified points";
+    const byAction={};
+    (data.claims||[]).forEach(claim=>{if(!byAction[claim.action_id])byAction[claim.action_id]=claim;});
+    ["youtube_subscribe","instagram_follow","facebook_follow","event_attendance"].forEach(id=>{
+      renderClaimStatus(id,byAction[id]?.status||null);
+      const btn=document.querySelector('[data-claim="'+id+'"]');
+      if(btn&&byAction[id]?.status==="verified") btn.disabled=true;
+    });
+    const bonus=(data.claims||[]).find(x=>x.action_id==="all_socials_bonus"&&x.status==="verified");
+    const state=document.getElementById("rewardBackendState");
+    if(state) state.textContent=bonus?"All-socials bonus verified and awarded":"Connected to the ReWyld rewards ledger";
+  }catch{
+    const state=document.getElementById("rewardBackendState");
+    if(state) state.textContent="Rewards backend temporarily unavailable";
+  }
+}
+
+async function claimReward(actionId,subjectKey,button){
+  const original=button.textContent;
+  button.disabled=true;
+  button.textContent="Submitting…";
+  try{
+    const result=await rewyldPost({
+      type:"reward_claim",
+      action_id:actionId,
+      subject_key:subjectKey||"global",
+      evidence:{source:"website_claim",claimed_at:new Date().toISOString()}
+    });
+    renderClaimStatus(actionId,result.claim?.status||"pending");
+    button.textContent=result.claim?.status==="verified"?"Verified":"Submitted";
+    await loadRewards();
+  }catch{
+    button.disabled=false;
+    button.textContent=original;
+  }
+}
+
+function setupTracking(){
+  const latest=document.getElementById("latestYoutubeCard");
+  if(latest){
+    latest.addEventListener("click",()=>{
+      trackOutbound("youtube_click","youtube",latest.href,latestVideoId,latestVideoTitle,{placement:"latest_video"});
+    });
+  }
+
+  document.querySelectorAll("[data-reward-open]").forEach(a=>{
+    a.addEventListener("click",()=>{
+      trackOutbound("reward_action_open",a.dataset.platform||"unknown",a.href,a.dataset.rewardOpen,a.textContent.trim(),{placement:"rewards"});
+    });
+  });
+
+  document.querySelectorAll("[data-claim]").forEach(btn=>{
+    btn.addEventListener("click",()=>claimReward(btn.dataset.claim,btn.dataset.subject||"global",btn));
+  });
+
+  document.querySelectorAll('.social').forEach(a=>{
+    a.addEventListener("click",()=>{
+      const u=a.href;
+      const platform=u.includes("youtube.com")?"youtube":u.includes("instagram.com")?"instagram":u.includes("facebook.com")?"facebook":"social";
+      trackOutbound(platform==="youtube"?"youtube_click":"social_click",platform,u,null,a.querySelector("strong")?.textContent||null,{placement:"social_grid"});
+    });
+  });
+
+  document.querySelectorAll('a[href*="eventbrite.com"]').forEach(a=>{
+    if(a.hasAttribute("data-reward-open")) return;
+    a.addEventListener("click",()=>trackOutbound("event_click","event",a.href,"wyld-camp-2026","Wyld Camp 2026",{placement:"event_cta"}));
+  });
+}
+
+function toggleIQ(){
+  const e=document.getElementById("iq"),o=getComputedStyle(e).display!=="none";
+  e.style.display=o?"none":"block";
+  if(!o)setTimeout(()=>e.scrollIntoView({behavior:"smooth"}),30);
+}
+
+setupTracking();
+loadLatestYoutube();
+loadRewards();
+</script>
 </body></html>
